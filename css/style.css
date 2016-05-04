@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url("http://i.imgur.com/cD95wbc.jpg");
+    background-size: cover;
+}
+
+input{
+  width: 200px
+}
+
+.btn{
+  margin-top:15px;
+  background-color:white;
+  border-style:solid;
+  border-color: black;
+}
+
+.btn:hover{
+ background-color:black;
+ color:white;
+}
+
+#guessbar:focus{
+  outline-color: black;
+  
+}
+
+#array{
+	color:grey;
+}
