@@ -37,7 +37,7 @@ hint();
 //**************************************//
 
 function restart(){
-	location.reload();
+   window.location.reload();
 }
 
 //**************************************//
@@ -46,10 +46,14 @@ function playersGuessSubmission(num){
 
 															//if answer is correct
 	if(num == winningNumber){                         		//if num = winningNumber return winning message
+    document.body.style.backgroundImage = "url('https://dysonology.files.wordpress.com/2010/10/clint-eastwood-25-0bbw2qhfs9-1024x768.jpg')"
+
 	var element = document.getElementById("header");
-		element.innerHTML = "You win ...";
+		element.innerHTML = "Ya got lucky...";
 	var element1 = document.getElementById("header2");
 		element1.innerHTML = "...this time!!";
+    			var element1 = document.getElementById("header3");
+element1.innerHTML = "";
 	} else if (usednum.indexOf(num) == -1){	
 	ifwrong(num)											//if num has not been used call ifwrong(num)
 		} else {	
@@ -62,7 +66,7 @@ function playersGuessSubmission(num){
 function ifwrong(num){	
 	usednum.push(num);
 		var element4 = document.getElementById("array");
-		element4.innerHTML = usednum;						//if num has not been used, display at #array	 							
+		element4.innerHTML = "Numbers guessed: " + usednum;						//if num has not been used, display at #array	 							
 	counter --												//if num has not been used and is wrong counter -- and return msg of how many chances are left
 	if (counter > 1){								
 		var element = document.getElementById("header");
@@ -77,6 +81,8 @@ element.innerHTML = "Guess wisely, this is your last chance!";
 element1.innerHTML = "";
 	} 
 	if (counter === 0) { 
+    
+   document.body.style.backgroundImage = "url('http://wallpaper.zone/img/2220158.png')"
 		var element = document.getElementById("header");  	//when counter reaches 0
 element.innerHTML = "Game over, the answer was " + winningNumber + "<br>" +"Please start over";
 		var element1 = document.getElementById("header2");
